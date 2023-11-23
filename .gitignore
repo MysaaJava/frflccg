@@ -1,0 +1,5 @@
+# Assignated folder for python venv
+.env/
+
+# Lock files from libreoffice
+.~lock*
