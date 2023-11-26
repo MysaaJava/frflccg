@@ -1,7 +1,81 @@
 from nltk.ccg import chart, lexicon
+from nltk.ccg.chart import CCGChart,CCGLeafEdge
 from nltk.tree import Tree
 import pandas as pd
 import numpy as np
+
+
+valz = {
+    '>' : 0.8,
+    '<' : 0.7
+}
+def rweight(rule):
+    s = rule.__str__()
+    if s in valz:
+        return valz[s]
+    else:
+        return 1.0 # Base rules weight
+
+# Implements the CYK algorithm, code partly taken from nltk
+def weightedParse(tokens, lex, rules):
+    chart = CCGChart(list(tokens))
+    
+    # Initialize leaf edges.
+    for index in range(chart.num_leaves()):
+        for token in lex.categories(chart.leaf(index)):
+            new_edge = CCGLeafEdge(index, token, chart.leaf(index))
+            new_edge.weight = 1.0
+            chart.insert(new_edge, ())
+
+    # Select a span for the new edges
+    for span in range(2, chart.num_leaves() + 1):
+        for start in range(0, chart.num_leaves() - span + 1):
+            
+            bestedge = None
+            
+            # Try all possible pairs of edges that could generate
+            # an edge for that span
+            for part in range(1, span):
+                lstart = start
+                mid = start + part
+                rend = start + span
+
+                for left in chart.select(span=(lstart, mid)):
+                    for right in chart.select(span=(mid, rend)):
+                        # Generate all possible combinations of the two edges
+                        for rule in rules:
+                            edgez = list(rule.apply(chart, lex, left, right))
+                            if(len(edgez)==1):
+                                edge = edgez[0]
+                                edge.weight = rweight(rule) * left.weight * right.weight
+                                edge.triple = (rule,left,right)
+                                if (bestedge == None) or (bestedge.weight < edge.weight):
+                                    bestedge = edge
+                            elif(len(edgez)!=0):
+                                print("Too many new edges (unsupported rule used)")
+                                
+                        # end for rule loop
+                    # end for right loop
+                # end for left loop
+            # end for part loop
+    return chart
+
+def wpToTree(edge):
+    if isinstance(edge,CCGLeafEdge):
+        return Tree((edge.token(),"Leaf"),[Tree(edge.token(),[edge.leaf()])])
+    else:
+        return Tree(
+            (chart.Token(None,edge.categ()),edge.triple[0].__str__()),
+            [wpToTree(t) for t in (edge.triple[1:])])
+
+def bestTree(tokens, lex, rules):
+    # We build the weighgted parse tree using cky
+    w = weightedParse(tokens, lex, rules)
+    # We get the biggest edge
+    e = list(w.select(start=0,end=len(tokens)))[0]
+    # We get the tree that brought us to this edge
+    return (wpToTree(e),e.weight)
+
 
 
 # On importe notre lexique sous forme de tableur
@@ -59,103 +133,15 @@ with open('phrases.txt') as f:
         
         if printTotal:
             print(i,phrase)
-
-from nltk.ccg.chart import CCGChart,CCGLeafEdge
-
-
-valz = {
-    '>' : 0.8,
-    '<' : 0.7
-}
-def rweight(rule):
-    s = rule.__str__()
-    if s in valz:
-        return valz[s]
-    else:
-        return 1.0 # Base rules weight
-
-# Implements the CYK algorithm
-def cyk(parser, tokens, lex, rules):
-    chart = CCGChart(list(tokens))
-    chart2 = CCGChart(list(tokens))
-    
-    # Initialize leaf edges.
-    for index in range(chart.num_leaves()):
-        for token in lex.categories(chart.leaf(index)):
-            new_edge = CCGLeafEdge(index, token, chart.leaf(index))
-            new_edge.weight = 1.0
-            chart.insert(new_edge, ())
-            chart2.insert(new_edge, ())
-    print(chart.pretty_format())
-
-    # Select a span for the new edges
-    for span in range(2, chart.num_leaves() + 1):
-        for start in range(0, chart.num_leaves() - span + 1):
+        
+        
+        # On affiche la dérivation la meilleure pour l'arbre
+        if (i==0):
+            print("Pas de dérivation tout court :/")
+        else:
+            t,d = bestTree(phrase.split(), lex, chart.ApplicationRuleSet)
+            print("Found derivation tree with weight",d)
+            chart.printCCGDerivation(t)
             
-            bestedge = None
             
-            # Try all possible pairs of edges that could generate
-            # an edge for that span
-            for part in range(1, span):
-                lstart = start
-                mid = start + part
-                rend = start + span
 
-                for left in chart.select(span=(lstart, mid)):
-                    for right in chart.select(span=(mid, rend)):
-                        # Generate all possible combinations of the two edges
-                        for rule in rules:
-                            edgez = list(rule.apply(chart, lex, left, right))
-                            if(len(edgez)==1):
-                                edge = edgez[0]
-                                edge.weight = rweight(rule) * left.weight * right.weight
-                                edge.triple = (rule,left,right)
-                                print(edge)
-                                if (bestedge == None) or (bestedge.weight < edge.weight):
-                                    bestedge = edge
-                            elif(len(edgez)!=0):
-                                print("Too many new edges")
-                                
-                        # end for rule loop
-                    # end for right loop
-                # end for left loop
-            # end for part loop
-            if bestedge != None:
-                print("|",bestedge.triple,rweight(bestedge.triple[0]) * bestedge.triple[1].weight * bestedge.triple[2].weight)
-                e = list(bestedge.triple[0].apply(chart2,lex,bestedge.triple[1],bestedge.triple[2]))[0]
-                e.triple = bestedge.triple
-                    
-        print("-"*20)
-    return chart
-
-def totree(edge):
-    if isinstance(edge,CCGLeafEdge):
-        return Tree((edge.token(),"Leaf"),[Tree(edge.token(),[edge.leaf()])])
-    else:
-        return Tree(
-            (chart.Token(None,edge.categ()),edge.triple[0].__str__()),
-            [totree(t) for t in (edge.triple[1:])])
-
-def viterbiCKY(mots):
-    n = len(mots)
-    t = np.zeros((n+1,n+1))
-    # t[s,k] is the probability of obtaining the word mots[s] mots[s+1] ... mots[s+n-1]
-    for i in range(0,n):
-        t[i][1] = 1.0
-    for l in range(2,len(mots)+1):
-        for s in range(0,n-l+1):
-            # We want to set t[s][l]
-            for k in range(1,l): # Partitionning of the sequence
-                pass
-            
-#T ← ∅
-#for 0 ≤ i ≤ n do
-#δ(〈wi , i, i + 1〉) ← 1.0
-#end for
-#for all 〈X , i, j〉 ∈ V following a topological order do
-#δ(〈X , i, j〉) ← 0
-#for 〈X , i, j〉 → 〈Y1, i, k〉 〈Y2, k, j〉 ∈ IE (v ) do
-#δ(〈X , i, j〉) ← max (δ(v ), ψ(e) × δ(〈Y1, i, k〉) × δ(〈Y2, k, j〉))
-#end for
-#end for
-#end function
