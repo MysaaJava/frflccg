@@ -12,7 +12,7 @@ n = len(table['MOT'])
 # On donne la liste des catégories primitives
 lexstring=':- S,N,Pp\n'
 # On ajoute la notation V pour N\S
-lexstring+='V :: N\\S\n'
+lexstring+='V :: S\\N\n'
 
 # On lis les données depuis le tableur en une chaine de caractère parsable
 for i in range(n):
@@ -26,29 +26,35 @@ for i in range(n):
 
 # On crée notre lexique
 lex = lexicon.fromstring(lexstring)
-#print(lex)
 
 # On crée le parser, on donne l'ensemble des règles qu'il est cencé connaître
-#parser = chart.CCGChartParser(lex, chart.DefaultRuleSet)
-parser = chart.CCGChartParser(lex, chart.ApplicationRuleSet)
+parser = chart.CCGChartParser(lex, chart.DefaultRuleSet)
+#parser = chart.CCGChartParser(lex, chart.ApplicationRuleSet)
+
+printTotal=True
+printDerivations=not printTotal
 
 # On lit les phrases dans le fichier
 with open('phrases.txt') as f:
     lines = f.readlines()
-    
-    # On ajoute quelques phrases de test supplémentaires
-    lines.append("chat dort")
-    lines.append("pouet souris")
-    lines.append("quel chat mange la souris ?")
-    lines.append("pouet prout ?")
-    lines.append("chat surdort")
+
+    lines.append("mon voisin lui donne le chat")
 
     for phrase in lines:
         # On met tout en minuscule
         phrase = phrase.lower().strip()
-        print('#',phrase)
-        
-        # Et on affiche tous les arbres de dérivation trouvés
-        for parse in parser.parse(phrase.split()):
-            chart.printCCGDerivation(parse)
+        if printDerivations:
+            print("============================================================================")
+            print('#',phrase)
+        lex = lexicon.fromstring(lexstring)
+        parser = chart.CCGChartParser(lex, chart.ApplicationRuleSet)
 
+        # Et on affiche tous les arbres de dérivation trouvés
+        i=0
+        for parse in parser.parse(phrase.split()):
+            i+=1
+            if printDerivations:
+                chart.printCCGDerivation(parse)
+            
+        if printTotal:
+            print(i,phrase)
