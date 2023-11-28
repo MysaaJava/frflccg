@@ -1,0 +1,1116 @@
+==================================================
+found the following 32 derivations:
+            est                        attrape
+ ((S\N)/_var1) {\P x.P(x)}  ((S\N)/N) {\n m.attrappe(m,n)}
+----------------------------------------------------------->
+                (S\N) {\x m.attrappe(m,x)}
+            est                        qui
+ ((S\N)/_var1) {\P x.P(x)}  ((N\N)/(S\N)) {\V n.V(n)}
+------------------------------------------------------>
+                  (S\N) {\x n.x(n)}
+            ses               rat
+ (N/pN) {\P.exists x.P(x)}  pN {rat}
+------------------------------------->
+         N {exists x.rat(x)}
+                la                            est               fromage
+ ((S\N)/(S\N)) {\P.exists m.P(m)}  ((S\N)/_var1) {\P x.P(x)}  pN {fromage}
+                                  ----------------------------------------->
+                                            (S\N) {\x.fromage(x)}
+--------------------------------------------------------------------------->
+                        (S\N) {exists m.fromage(m)}
+   il          dorment
+ N {il}  (S\N) {\n.dormir(n)}
+------------------------------<
+        S {dormir(il)}
+            ses               souris
+ (N/pN) {\P.exists x.P(x)}  pN {souris}
+---------------------------------------->
+         N {exists x.souris(x)}
+            mon                sœur
+ (N/pN) {\P.exists x.P(x)}  pN {soeur}
+--------------------------------------->
+         N {exists x.soeur(x)}
+   elle            dort
+ N {elle}  (S\N) {\n.dormir(n)}
+--------------------------------<
+        S {dormir(elle)}
+                    la                                mange
+ ((S\N)/((S\N)/N)) {\P n.exists m.P(n,m)}  ((S\N)/N) {\n m.mange(m,n)}
+----------------------------------------------------------------------->
+                    (S\N) {\n.exists m.mange(m,n)}
+            est                    mangée
+ ((S\N)/_var1) {\P x.P(x)}  Pp {\n x.mangé(x,n)}
+------------------------------------------------->
+           (S\N) {\x z65.mangé(z65,x)}
+            est               souris
+ ((S\N)/_var1) {\P x.P(x)}  pN {souris}
+---------------------------------------->
+          (S\N) {\x.souris(x)}
+            est                    mangée
+ ((S\N)/_var1) {\P x.P(x)}  Pp {\n x.mangé(x,n)}
+------------------------------------------------->
+           (S\N) {\x z65.mangé(z65,x)}
+            la                chat
+ (N/pN) {\P.exists x.P(x)}  pN {chat}
+-------------------------------------->
+         N {exists x.chat(x)}
+            est                                le
+ ((S\N)/_var1) {\P x.P(x)}  ((S\N)/((S\N)/N)) {\P n.exists m.P(n,m)}
+--------------------------------------------------------------------->
+                    (S\N) {\x n.exists m.x(n,m)}
+        donner           elle
+ (N/N) {\n.donner(n)}  N {elle}
+-------------------------------->
+        N {donner(elle)}
+            est                        mon
+ ((S\N)/_var1) {\P x.P(x)}  (N/pN) {\P.exists x.P(x)}
+------------------------------------------------------>
+             (S\N) {\x.exists z66.x(z66)}
+    sœur             noir
+ pN {soeur}  (pN\pN) {\n.noir(n)}
+----------------------------------<
+         pN {noir(soeur)}
+            ses                     noir            voisin
+ (N/pN) {\P.exists x.P(x)}  (pN/pN) {\n.noir(n)}  pN {voisin}
+                           ----------------------------------->
+                                    pN {noir(voisin)}
+-------------------------------------------------------------->
+                 N {exists x.noir(voisin,x)}
+               lui                            est                        pourchasse
+ ((S\N)/(S\N)) {\V n.à(V(n),lui)}  ((S\N)/_var1) {\P x.P(x)}  ((S\N)/N) {\n m.pourchasse(m,n)}
+                                  ------------------------------------------------------------->
+                                                  (S\N) {\x m.pourchasse(m,x)}
+----------------------------------------------------------------------------------------------->
+                             (S\N) {\n.à(\m.pourchasse(m,n),lui)}
+            est               elle                souhaite                          ses               fromage
+ ((S\N)/_var1) {\P x.P(x)}  N {elle}  ((S\N)/N) {\N m.souhaite(m,N(m))}  (N/pN) {\P.exists x.P(x)}  pN {fromage}
+                                                                        ----------------------------------------->
+                                                                                 N {exists x.fromage(x)}
+                                     ---------------------------------------------------------------------------->
+                                                    (S\N) {\m.souhaite(m,exists x.fromage(x)(m))}
+                           --------------------------------------------------------------------------------------<
+                                                S {souhaite(elle,exists x.fromage(x)(elle))}
+----------------------------------------------------------------------------------------------------------------->
+                              (S\N) {\x.souhaite(elle,exists x.fromage(x)(elle),x)}
+            est                        un                fromage
+ ((S\N)/_var1) {\P x.P(x)}  (N/pN) {\P.exists x.P(x)}  pN {fromage}
+                           ----------------------------------------->
+                                    N {exists x.fromage(x)}
+-------------------------------------------------------------------->
+                 (S\N) {\x.exists x.fromage(x)(x)}
+            est                         souhaite
+ ((S\N)/_var1) {\P x.P(x)}  ((S\N)/N) {\N m.souhaite(m,N(m))}
+-------------------------------------------------------------->
+                (S\N) {\x m.souhaite(m,x(m))}
+            le                souris
+ (N/pN) {\P.exists x.P(x)}  pN {souris}
+---------------------------------------->
+         N {exists x.souris(x)}
+            mon               souris
+ (N/pN) {\P.exists x.P(x)}  pN {souris}
+---------------------------------------->
+         N {exists x.souris(x)}
+                la                       dorment
+ ((S\N)/(S\N)) {\P.exists m.P(m)}  (S\N) {\n.dormir(n)}
+-------------------------------------------------------->
+               (S\N) {exists m.dormir(m)}
+            est                     noir
+ ((S\N)/_var1) {\P x.P(x)}  (pN\pN) {\n.noir(n)}
+------------------------------------------------->
+               (S\N) {\x.noir(x)}
+            mon               souris
+ (N/pN) {\P.exists x.P(x)}  pN {souris}
+---------------------------------------->
+         N {exists x.souris(x)}
+   il                       le                                attrape
+ N {il}  ((S\N)/((S\N)/N)) {\P n.exists m.P(n,m)}  ((S\N)/N) {\n m.attrappe(m,n)}
+        -------------------------------------------------------------------------->
+                            (S\N) {\n.exists m.attrappe(m,n)}
+----------------------------------------------------------------------------------<
+                           S {exists m.attrappe(m,il)}
+                      et                              mange
+ (((S\N)\(S\N))/(S\N)) {\P Q x.(P(x) & Q(x))}  (S\N) {\n.mange(n)}
+------------------------------------------------------------------->
+              ((S\N)\(S\N)) {\Q x.(mange(x) & Q(x))}
+            est                        ?
+ ((S\N)/_var1) {\P x.P(x)}  (S\S) {\S.exists x.S(x)}
+----------------------------------------------------->
+            (S\N) {\x.exists z67.x(z67)}
+            est                                 quoi
+ ((S\N)/_var1) {\P x.P(x)}  (((S/(S\N))/N)\(((S\N)\(S\N))/N)) {\A q.A(q)}
+-------------------------------------------------------------------------->
+                            (S\N) {\x q.x(q)}
+                très                          noir
+ ((pN/pN)/(pN/pN)) {\P n.très(P(n))}  (pN\pN) {\n.noir(n)}
+----------------------------------------------------------->
+                (pN/pN) {\n.très(noir(n))}
+==================================================
+968 are left unparsed :
+ par  de  souhaite  mon  donne  dorment  ses  attrape  sœur  méchant 
+ pourchasse  ses  un  elle  donné  souris  qui  méchant 
+ fromage  souhaite  ses  mange  mangé  dents  voisin  que  un  de 
+ donner  sœur  mangé  dents  mangée  le  à  quel  souris  ses 
+ ?  donner  la  qui  un  paisiblement  quelle  que  mange  fromage 
+ mangé  mangée  de  très  à  quoi  fromage 
+ avec  sœur  ? 
+ de  mange  avec  souhaite  ses 
+ sœur  noir  mon  donne  dorment  rat  fromage  un  dort 
+ mangé  noir  quel  souris  elle 
+ donne  est  que  paisiblement 
+ sœur  que  noir  mon  et  un  est  paisiblement  de 
+ il  quoi  paisiblement  voisin  quel  mon 
+ fromage  est  mangé  souris  ses  chat 
+ rat  de  donné  elle  pourchasse  souhaite  avec  noir  dents 
+ souris  la  dorment  par  dents 
+ voisin  lui  quelle  qui  quoi  par  très  donné  donner 
+ méchant  donné  avec  quelle  paisiblement  dorment 
+ pourchasse  attrape  lui 
+ rat  il  et  de  le  un  donner  que  mon  donné 
+ dents  mangée  elle  pourchasse  mange  dort  le  rat  paisiblement 
+ quoi  qui  de  rat  souris  voisin  souhaite  avec  ? 
+ quoi  avec  fromage  mangée 
+ donner  un  fromage  de  elle  pourchasse  dort  mangé  souris 
+ mange  attrape  par  quel  dents  méchant  donner  très 
+ mon  le  quoi  noir  de  dents 
+ voisin  pourchasse  donner  dort  méchant  de  elle 
+ quel  est  sœur 
+ rat  chat 
+ méchant  fromage  chat  mange  mangée 
+ lui  très  donné 
+ mangée  noir  voisin  mangé  la  quelle  donné  donner  qui  ? 
+ et  quoi  pourchasse  attrape  mon  voisin  ses  paisiblement  avec 
+ la  méchant  donné 
+ un  pourchasse  mon  de  le  très  donné  sœur  paisiblement 
+ il  un 
+ et  est  noir  mange  souris  chat  lui  de  que  quoi 
+ lui  attrape  souhaite  quel  avec  pourchasse  sœur  ses  elle 
+ pourchasse  mangé  ses  quelle  à  chat  paisiblement 
+ par  méchant  dort  donné  souhaite 
+ mange  mon 
+ et  souris  donner  est 
+ chat  noir  donner  quelle 
+ fromage  attrape  ?  très  est  donné  sœur  rat 
+ pourchasse  quoi  un  est  lui 
+ par  très  le  la  de  quel  sœur  attrape  elle 
+ fromage  sœur  quelle  dort  chat 
+ ses  voisin  à  souhaite 
+ quoi  de  très  voisin  à 
+ mange  dort  chat  elle 
+ très  la  mange  que  sœur 
+ dents  qui  ses 
+ avec  dorment  mangé  dents  ? 
+ il  voisin  dort  pourchasse  ?  mange  dorment 
+ pourchasse  voisin  méchant  que  elle  la 
+ dents  à  et  méchant  la  ses  mangé 
+ très  fromage  de  donner 
+ attrape  est  avec 
+ souhaite  quoi 
+ pourchasse  ses  souhaite  mangée  ?  il  est  fromage  de  noir 
+ donné  que  souris  elle  est  quelle 
+ quel  souris  mon  paisiblement  très  dents  dorment  est 
+ sœur  dort  par  lui  fromage  paisiblement 
+ quel  il  lui  que  mangée  avec  souris  mangé 
+ noir  donné  le  de  dents 
+ il  quoi  lui 
+ ?  très 
+ donne  dents 
+ ses  quel  dorment  dort  dents  donné  de  souris  et  ? 
+ voisin  le 
+ fromage  donner  est  chat  souhaite  rat  noir 
+ mangée  attrape  chat  mangé  et 
+ est  dort  elle 
+ la  sœur  elle  et  dorment  mangée  voisin  que 
+ dort  donne  noir  très  il  lui  elle  attrape  ses 
+ qui  méchant  donne  de  fromage  et 
+ dents  à  très  quoi  souris 
+ le  noir  souhaite  avec 
+ donné  la  donner  mon  rat 
+ dort  méchant  il  très  ?  quoi 
+ ?  voisin  un  quelle  mangée  donne  donné  qui  ses 
+ souris  dents  la 
+ il  pourchasse 
+ méchant  le  il  lui  et  donner 
+ pourchasse  méchant  mon 
+ pourchasse  voisin  ses 
+ dorment  donné  voisin  le  la  ?  à  noir 
+ pourchasse  mangé  donné  très  le  et  par 
+ souhaite  donner  voisin  qui  mangée  que  à  méchant 
+ est  quoi  dort 
+ lui  dorment  ?  souris  que  chat  pourchasse  donné  paisiblement 
+ souris  donne  un  sœur  ses  il  voisin  pourchasse  très 
+ mange  qui  ?  le  méchant  souhaite  voisin  paisiblement  donné 
+ mange  à 
+ souris  qui  paisiblement  attrape  quelle  dents  mangée  mange  que 
+ de  mange  dents  donne 
+ rat  que 
+ mon  et  dorment  la  méchant  de  attrape  est  quoi  fromage 
+ qui  à  est 
+ avec  sœur  mangée  quoi  méchant  quelle  un  est 
+ lui  et  quoi 
+ fromage  donne  mangée  souhaite  un  dorment  très  dort  et  avec 
+ la  donne  dort  rat  voisin  chat  quelle 
+ lui  fromage  que  à  il 
+ sœur  quelle  est 
+ sœur  souris  est  donne  à  lui 
+ mangé  qui  il 
+ quel  dents  est  sœur  pourchasse 
+ sœur  quoi  méchant  dorment  très  souris  elle  à  un 
+ pourchasse  mon  dorment  avec  fromage 
+ que  par  méchant  souris  elle  dorment  dort  très 
+ dents  mangée  à  sœur  mange  donné  que  très 
+ à  méchant  et  souris 
+ dents  sœur  il  dorment  chat  qui 
+ dort  sœur  fromage  paisiblement  mangée  rat  de  qui 
+ un  dorment  et  très  mangé  donné  noir  méchant  que 
+ est  pourchasse  quelle  chat  dorment  très  mon  par  elle  paisiblement 
+ voisin  fromage  pourchasse  ses 
+ lui  mange  pourchasse  dents  voisin  la  un  mangé 
+ dents  de  donné  mangé  à  que  mangée 
+ quoi  voisin  mangée  ses  mange 
+ est  ?  lui  ses  que  très  mon  le  quoi  quelle 
+ quoi  et 
+ voisin  la  chat  de  dorment  elle 
+ avec  dort 
+ quoi  mangée 
+ méchant  quel  à  très  mange 
+ donner  donné  que  mangée  quoi  mangé  qui  donne  paisiblement  et 
+ dorment  dort  il  quoi  noir  sœur  mangée 
+ fromage  donne 
+ donné  méchant  mon  mangée  mangé  et  qui  dents  le  noir 
+ donne  mon  par  est  fromage  un  mangée  paisiblement  attrape  mange 
+ quelle  dents  donne  donner  lui 
+ souhaite  mon  paisiblement 
+ très  quelle  voisin  donne  mon  rat  attrape 
+ avec  à  sœur  souris 
+ avec  il  que  la  rat  donne  sœur  de  à  fromage 
+ ses  par 
+ quelle  ?  que  mon  ses  à  très  un  paisiblement 
+ dorment  souris  attrape  donné  voisin  sœur 
+ ?  fromage  ses  quelle  de  dorment  mangé  dort  le 
+ fromage  mange  donné  il 
+ quel  donné  sœur  que  avec 
+ la  souhaite  dorment 
+ ses  par  dents  lui  quoi  mon  souhaite 
+ mange  méchant 
+ très  quelle  paisiblement  est  noir  attrape  mon  mangée 
+ elle  il  le  qui  attrape  sœur  dents  lui  et  quel 
+ méchant  avec  elle  dort  donné  rat  donne  il 
+ dort  un  dorment  quelle  est  le  à 
+ voisin  donne 
+ paisiblement  il  quelle  à 
+ à  sœur  quel  que  pourchasse  ?  quelle  par  il  dort 
+ lui  mon  pourchasse  méchant  elle 
+ à  quel  donne  donner  et  de 
+ dorment  que  chat  méchant  paisiblement 
+ de  il  un  très  dents  pourchasse 
+ la  souhaite  quoi  très  qui  dort  dorment 
+ fromage  ?  un  mange 
+ noir  le 
+ dents  dorment  il  rat  et  donné  donne  paisiblement  fromage 
+ ?  méchant  lui  un  pourchasse 
+ mangé  il  ?  voisin  mange  de 
+ très  paisiblement  donne  qui  attrape  souhaite  mangée 
+ ?  ses  souhaite 
+ un  ?  qui  mangé  mange  dents  méchant  souhaite  dorment  est 
+ quelle  est  ses  la  chat  quoi  le  voisin  pourchasse 
+ souris  dort  avec  donne  quel  sœur  est  donner  de 
+ par  elle  sœur  quel  pourchasse  la  et  de  très 
+ ?  à  sœur  ses  mon  il  donner  la 
+ donné  mon  la  souhaite  attrape  par 
+ mangé  avec  dort  est  la  rat  donner  donne 
+ rat  voisin  ses  le  par  lui  souhaite 
+ quelle  quel  et 
+ dents  méchant  lui  est  dort  donné 
+ ses  quel 
+ de  à  que 
+ noir  ses  mange  dorment 
+ que  à  lui 
+ le  que  dort 
+ quelle  rat  avec  mangée  ?  un 
+ donne  mangée  mangé  par  qui  noir  dents 
+ souhaite  quelle  mangé  noir  la  très  rat 
+ quoi  très  mangé  paisiblement  souris 
+ lui  souhaite  que  noir  fromage  très  qui  un 
+ et  dorment  par  souhaite  avec 
+ paisiblement  quelle 
+ que  dort 
+ paisiblement  dents  dort  méchant 
+ donné  méchant  dents  qui  pourchasse 
+ sœur  de  dorment  donne  que  fromage  très  pourchasse 
+ la  lui  à  est  souhaite 
+ dents  chat  mon  la  sœur  souhaite  dorment 
+ souris  dort  sœur  à 
+ paisiblement  fromage  un  et  dorment  mon 
+ souhaite  avec  elle  voisin  rat  ses  lui  sœur  à 
+ attrape  que  sœur 
+ et  dorment  paisiblement  quelle  dort  ses  le  mon 
+ donner  très  le  méchant  souhaite  fromage  quel  quoi 
+ que  donne  avec  et  pourchasse  à  attrape  voisin 
+ par  très  est  que  rat  souhaite 
+ mangée  de  par 
+ et  ses  un 
+ lui  donne  noir  attrape 
+ la  par  dents  donne  il 
+ le  souhaite  est 
+ quoi  souris 
+ rat  un  souhaite  souris 
+ lui  ?  avec  donne  paisiblement  donner  mon  méchant  fromage 
+ pourchasse  voisin  par  sœur 
+ fromage  pourchasse  attrape  elle  très  que  dents 
+ dents  un 
+ quel  et  sœur  dort  est  très  par  qui 
+ ses  souhaite  rat  ?  paisiblement  le  et 
+ quelle  dents  noir  chat  très  ses  mange  il  quel 
+ souris  qui  chat  quel  elle  sœur  mon  quoi  ses  de 
+ mon  souhaite  sœur  est  dort  que  la  quoi  le  et 
+ un  noir  la  mangé  voisin  pourchasse  souhaite  dents 
+ il  dort  dents  à  ? 
+ quel  et  dorment  ses  paisiblement  souhaite  rat 
+ paisiblement  rat  mange  donner  quoi  dort  à  sœur  par 
+ par  mangée  un  souhaite  ses  et  dorment  donner 
+ noir  paisiblement  il  quelle  dorment  souris  rat  et  pourchasse  voisin 
+ donne  le 
+ par  pourchasse  méchant  lui  quoi  voisin 
+ attrape  noir  souris  mon  très 
+ mon  mange  un  la  lui  très  que 
+ donner  mangé  que 
+ lui  ses  pourchasse  il  ?  un  donner  à  donne 
+ donner  souhaite  il  rat  que  donné 
+ dort  mange  lui  de  noir  donné  donne  et 
+ un  attrape 
+ fromage  très  donne  chat  quel  dorment  ses  mangée  qui 
+ quoi  que  fromage 
+ qui  méchant  rat  sœur  mangée  dents  par  la 
+ donner  et  donné  quelle  le  par 
+ il  mangé  le  mangée 
+ chat  donner  quel  paisiblement 
+ mangé  noir  et  de  ?  très  par  fromage 
+ attrape  avec  mangé 
+ mangé  souris  quoi  le  chat  quel  rat  quelle  par  attrape 
+ noir  elle 
+ mange  souhaite  chat 
+ donne  quelle  mange  donner  qui  la  donné 
+ paisiblement  mangée  ses  qui  mange  elle  dorment  donner  avec  voisin 
+ est  ses  donné  méchant  mon  qui  mangée  dents  souris  dort 
+ donne  de  méchant  à  le  donné  quel  noir  un  pourchasse 
+ et  la  il  voisin  le  dents  quoi 
+ par  de  quel  elle  avec  mangé  méchant  donner  rat  souris 
+ avec  donné  qui  pourchasse  rat  il  souris  que 
+ quel  est  quelle 
+ paisiblement  la 
+ rat  noir  la 
+ dort  et  quel 
+ méchant  la  est  dents  ?  elle  mon 
+ quoi  elle  il  donner  attrape  qui  ?  le 
+ méchant  mon  il  mangée  souris  à  mange  sœur  très 
+ attrape  dort  donné  est  un  à  donner 
+ qui  rat  donner  sœur  lui 
+ voisin  noir  il  donne 
+ de  un  lui  donne  ses  la  le  voisin 
+ donné  la  donne  voisin  qui  par 
+ donne  quel  lui  de  paisiblement 
+ quel  un  est  quoi  mon  donné  mangée  donner  quelle  souhaite 
+ souris  lui  attrape  avec  la 
+ pourchasse  souris 
+ par  paisiblement  souhaite  à  attrape  méchant 
+ mange  ses  dents  et  quelle  dorment  paisiblement 
+ mangée  mangé  voisin  donné  rat 
+ chat  très 
+ mange  très  rat  elle  paisiblement  donne 
+ fromage  donne  la  de  donné  le  rat  quel 
+ et  avec  dort  la  lui  méchant  il  donner 
+ chat  de  noir  le  quoi 
+ rat  quelle  sœur  de  mangée  un  la 
+ fromage  elle  souris  mangé  donne 
+ quel  il  ?  est 
+ quelle  paisiblement  il  dents  avec  quoi  de  sœur 
+ souhaite  attrape  dort  souris  noir  donne  est  ses  un  mon 
+ très  dort  ses  dents  et  fromage  à  rat  elle  sœur 
+ la  quelle  fromage  quel 
+ quoi  à  il 
+ la  de  fromage  rat  donner 
+ il  souris  ses  chat  un  quelle  voisin  à 
+ noir  dort  chat  que 
+ lui  dort  très  attrape  quoi  chat  dorment 
+ pourchasse  chat  avec  fromage 
+ mangée  la 
+ quelle  un  souris  dorment 
+ mange  lui  sœur 
+ elle  sœur  lui  noir  pourchasse  dents  qui  la 
+ dort  souris  méchant  qui  quoi 
+ mangée  paisiblement  de  quelle  souhaite  souris  méchant  attrape  et  très 
+ sœur  ses  ?  fromage  qui  par 
+ donne  très  pourchasse  rat  paisiblement  par  quel  à  mon  le 
+ mange  rat  chat  mon  très  quoi 
+ de  un  elle  paisiblement  ? 
+ elle  quoi  mange  donner  chat  ?  dorment 
+ dorment  chat  ses  donne  mange  ? 
+ quelle  un 
+ quelle  mangé  donné 
+ donner  et  souhaite  qui  mangée  de  pourchasse  quel  lui  donné 
+ à  mangé  lui  dort  le 
+ lui  dents  souris 
+ mange  est  donner  donné  dents  quel  fromage  très  et 
+ que  quoi  sœur  avec  il  un  lui 
+ noir  dents  pourchasse  voisin  de 
+ le  mon  il  voisin  de  et  sœur 
+ que  dents 
+ la  ? 
+ un  donner  donne  sœur  donné  mon  très  elle 
+ à  donne 
+ dents  sœur  mangé  donner  à  chat 
+ ?  méchant 
+ mangé  il  dorment  sœur  ?  elle  la 
+ attrape  de 
+ que  dents  un  quel  mangée  méchant  quelle  qui  mangé 
+ il  mangé  noir  mange  avec  donné  souris  mon 
+ donné  méchant  quel  la  avec  souris  ? 
+ dort  souris 
+ est  à  dorment  avec 
+ mangé  donné  et  souhaite  un  lui 
+ dort  un  quelle  souris 
+ elle  donné  à 
+ la  fromage  souhaite  un  avec  que  pourchasse  donner  mon 
+ donné  quoi  à  elle 
+ rat  méchant  de 
+ sœur  donner  mange  avec  pourchasse  dents  souhaite  le  que  de 
+ dort  avec  par  souris  dorment  ses  dents  le  mon 
+ donner  mangée 
+ mange  méchant  elle  pourchasse  donner  mon  de  voisin 
+ avec  qui  paisiblement  noir  méchant  mange 
+ que  à  donne  lui  sœur  donné  paisiblement  de 
+ donné  fromage  avec  sœur  dorment  dort  paisiblement  un 
+ mon  de  que  donné  méchant  mange  et  chat  avec  quel 
+ donné  que  un  mon  pourchasse  noir  elle  de  souhaite 
+ de  fromage  il  avec  donne  mangé  quel 
+ de  dorment  avec  dents  lui 
+ il  que  dorment  donner  par  à  quelle  sœur  dents 
+ quoi  le  voisin  il  dorment  avec  donne  quel  lui 
+ la  rat  chat  sœur  par  méchant  le  il  donne 
+ mangée  lui  donné  sœur 
+ rat  très 
+ un  fromage  donné  souhaite  dents  la 
+ souhaite  méchant  par  quelle  sœur  la  dents  paisiblement  lui  fromage 
+ rat  très  mon  donner  mangé  quelle  mange  donné  le  il 
+ il  chat  est  que  ses  lui  de 
+ qui  donner  quoi  elle  noir  mangée  ses  pourchasse 
+ à  méchant  paisiblement  donner  ses 
+ dort  souris  dorment  très  de 
+ donné  mangée  elle 
+ souhaite  la  elle 
+ donner  quelle  à  très  dort  il  ses  mangée  voisin  est 
+ souhaite  de  lui  à  mon  quel  et  mangé  avec  chat 
+ est  rat  donner  paisiblement  donne  souhaite 
+ qui  chat  noir  mon  par  donne  donné 
+ voisin  sœur  de  chat  la  qui  fromage  le  méchant 
+ ?  voisin  chat 
+ fromage  très  quoi  donner  donné  mangé  le  mangée  de  est 
+ avec  attrape  par 
+ le  voisin  un  sœur  méchant 
+ ?  chat  avec  souris  quel  mange  mon  dort  il  ses 
+ souhaite  très 
+ mangé  souris  qui 
+ noir  fromage  mon  quelle  est 
+ donne  ?  le  mon  rat  mange  quel  chat 
+ est  souris  donne  méchant  mangée  un 
+ quoi  de  très  ?  sœur  souris  quel  par  que  voisin 
+ qui  elle  de  fromage  noir  le 
+ elle  donné  il  souris  attrape  voisin 
+ dort  quelle  très  par  donne  sœur  pourchasse  avec  à 
+ donné  souhaite  elle  rat  attrape  méchant  noir  souris  mon  dort 
+ dort  il  souris  que  quoi  elle  mon  mangée  rat 
+ lui  souris  un  souhaite  paisiblement  il  la 
+ est  par  pourchasse  voisin  donne  rat  de 
+ donné  à  que  dorment  mangée 
+ donner  la  sœur  quoi  pourchasse  noir  chat 
+ voisin  un  donne 
+ ses  sœur  avec  souris  de  noir  mangée  quoi 
+ méchant  chat  attrape  avec  dorment  que  mange  quoi  à 
+ ?  la  mon  quel  dents 
+ la  de  dorment  souhaite  dort 
+ noir  attrape  mangée 
+ il  elle  et  qui  avec  lui  mangé  de  mon 
+ paisiblement  souris  rat  et  dort  lui  un  dents 
+ la  pourchasse  ?  que  donné 
+ ses  quel  noir  souris  fromage  dorment  ?  elle 
+ un  mange  dents  très  méchant  mangé  dort  quel  souhaite  rat 
+ dort  ses  par 
+ de  sœur  très  un 
+ quoi  rat 
+ méchant  dorment 
+ voisin  quelle  que  rat  donner  sœur  ?  très 
+ mangée  est  dorment  le  quelle  mangé 
+ quel  avec  le  dorment  souhaite  souris  à  donné  elle 
+ pourchasse  et  mangée  avec  donné  est  qui  donner  que  noir 
+ attrape  il  elle  mangée  rat  souris  lui 
+ paisiblement  donné  la  avec  mangé  fromage  donner 
+ ?  la  mangée  chat  que  attrape  avec  souhaite  mange 
+ mangé  paisiblement  donne  rat 
+ méchant  sœur  que  paisiblement  mange 
+ et  il  qui  sœur  attrape  donné 
+ elle  dort  souris  souhaite 
+ mangée  sœur  qui  quelle  pourchasse 
+ noir  mangé  un  fromage  très  elle  à 
+ mangée  de  donne  paisiblement 
+ donner  quel  mangée 
+ attrape  par  donner  souris  et 
+ à  par  que  mangée  attrape  mange 
+ mange  dents  de  ses  qui 
+ mange  par  un  il  dents  que 
+ donné  à 
+ voisin  un  très  avec  méchant  qui  attrape  mangé  est  donner 
+ dort  elle  méchant  le 
+ fromage  est  sœur  mangée  souris  paisiblement  dents  un 
+ à  souris  la  un  avec  donné  paisiblement  de 
+ ses  donné  attrape  la  donne  souhaite  lui  ? 
+ attrape  méchant  de  ses  mange  très 
+ la  le  paisiblement  il  avec  mangée  lui 
+ sœur  à  attrape  donner  et 
+ paisiblement  donné  noir  et  très  chat  quelle  par 
+ mange  donné  que  quoi  attrape  qui 
+ mange  que  à  est  donner  attrape  rat  la  chat  et 
+ très  et  méchant  il  dents  voisin  dorment  avec 
+ donné  elle  méchant 
+ rat  mangé  ses  mangée  attrape  le  la  très  par 
+ quoi  dorment  ses  noir  et  quel  mangé  sœur  rat  avec 
+ donner  attrape  à  quel  donne  très  méchant 
+ à  le  la  mon  elle  rat 
+ est  mon  quelle  quel  fromage  voisin  avec  qui  donne 
+ quel  fromage  avec  mangée  noir  que 
+ à  un  qui  mangé 
+ ?  donne  souhaite  chat  sœur  de  très  qui 
+ très  ?  dorment  mangée  méchant  pourchasse  attrape 
+ pourchasse  quoi  souris  donne  sœur  mangé  le  un 
+ pourchasse  donné  ?  quoi  souris 
+ quoi  chat  dents  avec  mon  très  fromage  à 
+ à  mangée  sœur  voisin  rat  noir 
+ un  souris  paisiblement  il  mange  la  par  dents  ? 
+ et  sœur 
+ mon  sœur  le  attrape  fromage  noir  donné  mange  rat 
+ très  par  il  paisiblement  donner  pourchasse  quel  rat 
+ rat  que 
+ sœur  donne  dents  de  quel  quoi  que  pourchasse  attrape  donné 
+ et  avec  sœur  donné  souhaite  dort  lui  est  quel  rat 
+ lui  le  dort  la  souris  paisiblement  avec  ses  fromage 
+ elle  avec  noir  et  dents  un  dort  par  à  chat 
+ souhaite  un  ?  souris  elle  le 
+ méchant  avec  quel  à  lui  mon 
+ chat  avec 
+ et  voisin  chat  de  le  donner 
+ sœur  donne  avec  mangé  la  par  donné  le 
+ dorment  mangée  mon  souris  ?  elle  rat  quel  et  ses 
+ dorment  dents  quoi  lui  souris  de  à  donne  attrape  rat 
+ fromage  un  dents  à  chat  mangé  est 
+ que  ?  fromage  mangé 
+ mon  chat  donner  il  voisin  le  est 
+ sœur  ses  quoi  mon  pourchasse  à  avec 
+ il  dents  ?  avec 
+ donne  méchant  donné  chat  souhaite  noir  le 
+ ses  et  rat  mange  voisin 
+ la  quel  que  rat 
+ donne  donner  quel  paisiblement  que  avec 
+ pourchasse  un 
+ pourchasse  souris  de  qui  méchant  il  paisiblement  noir  rat 
+ souhaite  il  la  que  très  mon  est  quel  ?  donne 
+ souhaite  attrape  qui  sœur  lui  souris  donné 
+ le  ?  mangée  dorment 
+ à  chat  voisin  fromage  donner  est  elle  donne  quoi 
+ il  et  un  sœur  voisin  à  la  mange  quel  souhaite 
+ dorment  est 
+ lui  est  dents  voisin  quelle  la  il 
+ attrape  de  et  souhaite  elle  la  mangé  rat  le 
+ est  dorment  le  un  de  mangé 
+ dort  un  sœur  la  à  mange  mon 
+ ses  dorment  ?  souhaite  de  donner  méchant  qui  avec 
+ pourchasse  dort 
+ mangée  donné  est  elle  dorment 
+ donne  mangée  fromage  mangé  que 
+ donner  rat  à  très 
+ que  donne  la  méchant  chat  attrape  est 
+ dents  noir  par  et  méchant  il 
+ quoi  donne  que  dort 
+ rat  chat  que  à  ses  très  donner 
+ sœur  très  méchant  avec  paisiblement  donné 
+ sœur  ?  dorment  quelle  que  lui 
+ souris  donné  souhaite  voisin  le  de  attrape 
+ et  de  un  est  rat  la 
+ lui  dort  que  voisin  et  ?  est  de  quelle  avec 
+ paisiblement  mange  et  donne 
+ paisiblement  mon  quoi  il 
+ dents  voisin  chat  fromage  le 
+ dort  avec  et  par  ?  mange  souhaite  il  pourchasse  sœur 
+ ses  chat  paisiblement 
+ paisiblement  est  avec 
+ mange  sœur  méchant  dorment  elle 
+ souris  elle  quel  par  dents  pourchasse  mon  de  souhaite 
+ quel  dents  pourchasse  le 
+ voisin  pourchasse  souhaite  à  sœur  mange 
+ quoi  par  souhaite 
+ de  voisin  souris  mon  souhaite  dort  rat  donner 
+ voisin  par 
+ de  chat  attrape 
+ souris  méchant  donner  dort  le  mangée  quoi  elle  il  avec 
+ souhaite  dents  sœur  méchant  chat  mangé  rat 
+ méchant  lui  souris  à 
+ dorment  la  dents 
+ mangée  elle  quelle 
+ rat  quel  attrape  mange  sœur  est  noir 
+ donné  dort  chat  ?  avec  la  est  voisin  qui  à 
+ donner  et  rat 
+ voisin  attrape  chat  fromage  le 
+ donner  dorment  fromage  très  voisin  que 
+ chat  donne  dorment  mangée  pourchasse  de  est  elle  avec 
+ quelle  donné 
+ voisin  il  dents  mangée  et  avec  est  elle 
+ quel  très  dorment  attrape 
+ dorment  mangée  le  par  ses 
+ mangée  à 
+ qui  à 
+ quelle  ?  donner  mon 
+ un  donné  paisiblement  dorment  qui  est  mangé 
+ attrape  quel  il  la  chat  lui  rat  quelle 
+ le  mangé  quelle  elle  avec 
+ quoi  très  quelle  à  un  méchant 
+ souris  elle  rat  quoi  mange  chat  attrape 
+ chat  voisin  mangée  quelle  est  paisiblement  quoi 
+ fromage  il  le  un  souhaite  la  dorment  par  très 
+ elle  noir  de  le  très 
+ donne  par  mangée  quel  souris  paisiblement  de  et  sœur 
+ voisin  pourchasse  par  mangé  donne 
+ par  mangée  un  lui  donner  que  très  qui  et 
+ lui  mon  par  chat  paisiblement  donné  à  dort  méchant  elle 
+ souhaite  dort  de  est 
+ mange  est  il  paisiblement  à 
+ souhaite  et  rat  paisiblement 
+ rat  mange  dort  dorment 
+ donné  paisiblement 
+ et  ? 
+ mange  elle  quelle  méchant  et 
+ dort  elle  le 
+ que  chat  méchant  qui  mon  lui  donne  mange  souhaite 
+ donné  dorment  paisiblement  méchant  que  par  ses  elle  de  donner 
+ le  mangé 
+ lui  noir  donne  à  quoi 
+ dorment  donne  attrape  un  mon  ses  souhaite  donner 
+ très  fromage  quel  est  lui  le  elle  dents 
+ il  ?  avec  que 
+ méchant  mange  elle  mangé  fromage  la 
+ mangée  qui  dort  mange  dorment 
+ chat  donner  rat  méchant  souhaite 
+ quelle  chat 
+ souhaite  ?  est 
+ quelle  ?  mangé  noir  souhaite 
+ le  pourchasse  mangé  donné  lui 
+ ses  à  quoi 
+ fromage  voisin  que  à  le  par  méchant  rat  elle 
+ de  et  un  ses  quelle  quel  mangée 
+ est  avec  attrape  paisiblement  qui  voisin  lui  sœur  et  fromage 
+ de  dents 
+ est  donné  mangé  un  méchant  voisin  sœur 
+ attrape  mangée  noir  donne  dorment  dort  un  le  par  et 
+ il  méchant  avec  un  et 
+ mangée  donner  est  quelle  elle  sœur 
+ donné  mange  lui  très 
+ mangée  très  donné  chat  il  attrape  lui  et  mon 
+ elle  rat  fromage  noir  dort  donné  paisiblement  pourchasse 
+ rat  quoi  fromage  très  paisiblement  la  dorment  et  quel 
+ et  mangé  la  est  souhaite  dorment  voisin  fromage  dents 
+ fromage  sœur  dort  souris  et  méchant  noir  donné  par  qui 
+ est  rat  avec  dorment  mangée  ? 
+ dort  qui  attrape  très  le  de  souris  elle  un  quoi 
+ souhaite  méchant  donner  noir  mangé  par  dents 
+ donne  le 
+ chat  la  quoi  quelle  très  ses 
+ lui  rat  un  quel  elle 
+ mon  par  quelle  très  dents  donner  lui  attrape 
+ souris  elle  ses  attrape  souhaite  donner  quoi  mangée 
+ méchant  il  souhaite  donner  mangé  mange  que  dort  lui  souris 
+ dents  souhaite  noir  méchant  paisiblement 
+ paisiblement  dents  ses  un  souhaite  pourchasse  donné  attrape  souris  qui 
+ attrape  souris 
+ par  mangée  dents  pourchasse  lui 
+ souris  mon  ses 
+ à  sœur  fromage  quelle  noir  quel  est 
+ quoi  donne  souris 
+ que  mon 
+ mangée  quelle  dorment  elle  la  quel  et  qui 
+ mange  paisiblement  le  ?  un  de 
+ dorment  méchant  à 
+ avec  ses  qui 
+ sœur  le  mange  qui  est  dort  méchant  souris  ses  donné 
+ dort  noir  donne  quelle  lui  méchant  avec 
+ paisiblement  qui  la  et 
+ quoi  voisin 
+ sœur  chat 
+ mon  est  de  dort  lui  dorment  fromage  attrape  avec 
+ souhaite  fromage  mangé  donné  est 
+ quel  paisiblement  pourchasse  très  à  qui  il  voisin  par 
+ la  donner  elle 
+ et  pourchasse  est  attrape  dents  quoi 
+ ses  souris  mangé  dents  méchant  est  rat  quelle  voisin 
+ chat  que  de  pourchasse  ses  dort  très  mangée  mangé  à 
+ attrape  dorment  mon  souhaite  de  dents  sœur  noir  donné 
+ que  donne  à  qui 
+ à  qui 
+ donné  dents  voisin 
+ fromage  méchant  voisin 
+ quel  rat  mangée  donner  mon  elle  chat  souris  avec 
+ et  méchant  attrape  dort  mangée  quoi  souris  voisin  fromage  rat 
+ ?  souris  mon  quoi  à  donne  la  mangée  quel  dort 
+ donner  pourchasse  un  la 
+ le  dort  avec  de 
+ mange  quoi  le 
+ le  dorment  ses  souhaite  noir  dents  avec 
+ quel  est  lui  mange  et  sœur  paisiblement 
+ que  ?  rat  très  lui  quel  méchant  le  mange  fromage 
+ dorment  très  à 
+ de  dents  fromage  dorment  est  et  elle  ?  paisiblement  noir 
+ mangé  quelle  qui  un  sœur  dort  par  attrape  fromage  mon 
+ paisiblement  ?  attrape  souhaite  la  ses  mangée  voisin  un  lui 
+ quoi  voisin  qui  il  mange 
+ le  il  mangé  dorment 
+ avec  il  quoi  attrape  ses  elle  mangé 
+ chat  méchant  donner  pourchasse  donné  souhaite 
+ donner  qui 
+ paisiblement  mange  quoi  attrape  est  dents  méchant  donné  fromage  sœur 
+ dorment  noir  souris  de  il  sœur  ?  voisin  le 
+ méchant  très  quelle  dents 
+ rat  ?  qui  mangé  la  ses 
+ lui  mon  et  par 
+ paisiblement  quelle  le  mange  dorment  donner  il  quel  attrape 
+ quelle  donne 
+ il  elle  quoi  sœur  dorment 
+ mon  quoi  avec  mange  ses  souris  mangé  le  ? 
+ le  que  pourchasse  quel  voisin  quoi  lui 
+ mon  attrape  de  à  donne  il  souhaite  paisiblement  mangé  avec 
+ dort  souhaite  qui  il  donner  ses  rat  et  mange 
+ est  donner  à  ?  dents  très  il 
+ paisiblement  de  ses 
+ souhaite  mange  ses  qui  mangée  lui  il  est 
+ avec  quoi  quelle  donné  chat  noir  quel 
+ méchant  quoi  le  dorment  par  très  quelle  que 
+ donné  le  que  un  attrape 
+ par  dort  dents  pourchasse  ?  quel  noir  mangée 
+ dorment  et 
+ mon  la  paisiblement  mangée  et  donner  souris  un  avec  dorment 
+ souris  est  mon 
+ mon  ? 
+ ses  dents  elle  donner  voisin  attrape  le  il 
+ voisin  ses  à  dents  mangé  de 
+ noir  lui  elle  dents  donné  est  que  à  pourchasse 
+ ses  par  paisiblement  rat  quel 
+ par  pourchasse  ses  qui  mangée 
+ à  noir  méchant  quel  mangé  attrape 
+ paisiblement  de  qui  très  quoi  noir  sœur  mon  donné  voisin 
+ fromage  mange  dort  le 
+ quelle  très 
+ quel  mon  voisin  lui  méchant  à  pourchasse  donne  que  rat 
+ rat  mon  il  pourchasse 
+ quoi  est  mange  souris  la  sœur  fromage 
+ voisin  fromage  et  mon  mangée 
+ souris  chat  paisiblement  noir  rat  qui  par  donné  quelle  avec 
+ mangé  mange  à  dort  un  ses  il  sœur 
+ quoi  quelle  très  voisin  dents 
+ quoi  dort  dorment  dents  donne 
+ quel  par 
+ que  et  ?  quoi  à  dort 
+ quoi  quel  elle 
+ voisin  à  donner  souhaite  paisiblement 
+ chat  pourchasse  quoi  donner  paisiblement  un  lui  elle 
+ la  quel  mange  quelle  un  paisiblement  mon  dorment  que  ses 
+ attrape  lui  ?  elle  dents  mangé  noir  chat  que 
+ paisiblement  fromage  quel  sœur  que  lui  ?  dort  quelle  dents 
+ mange  il  ?  ses  quelle  elle  la  un 
+ par  donner  mangé  donne  très  de  ?  quoi  mon 
+ mange  dort 
+ méchant  il  mangé  quel  attrape 
+ qui  chat  avec  quoi  à  il  ?  la  dorment 
+ quelle  noir  pourchasse  sœur  quoi 
+ la  elle  souhaite  qui  le  mon  pourchasse  paisiblement  donner 
+ quoi  ses  mon  par  voisin 
+ elle  paisiblement 
+ le  ses  paisiblement 
+ dorment  elle  dents  avec 
+ mange  lui  le  de  qui  quoi  attrape 
+ la  elle  souhaite  dorment  à  de  chat  ses 
+ fromage  le  souris  noir  que  très  avec  un  attrape  donné 
+ à  quelle  donne  de  noir  est  souhaite  et 
+ il  quoi  lui  noir  sœur  dort  méchant  à  donne 
+ quoi  dents  souhaite  très  lui  elle  par  ses  donner  sœur 
+ par  mon  donner 
+ mangé  de  mange  est  avec 
+ de  mon  par  ses  pourchasse  quel  méchant  un  la  attrape 
+ fromage  mangé  dorment  quel  de 
+ elle  fromage 
+ mon  lui  très  méchant  fromage  à  chat  quoi  ses 
+ voisin  noir  de  que  dorment  le 
+ qui  voisin  est 
+ est  qui  chat  elle 
+ lui  la  elle  mange  ? 
+ donné  attrape  mangée  pourchasse  dents 
+ sœur  lui 
+ de  dorment  noir 
+ attrape  mon  ?  qui  donne  rat  par  quel  un  noir 
+ à  quel  voisin  attrape  mangée  donne 
+ mangée  chat 
+ avec  mange  souris  noir 
+ avec  qui  mangée  elle  mange  mon  le  voisin  fromage  quoi 
+ donner  rat 
+ mon  lui  mangé  pourchasse  dort 
+ ?  ses 
+ et  la 
+ que  un  ?  souris  sœur  mon 
+ elle  que  attrape  est  à  donné  il  mangée 
+ dorment  dents  mange  pourchasse  le  est  et  lui  la 
+ chat  attrape  pourchasse  donné 
+ quelle  ses 
+ dort  par  pourchasse  mangé  mange  dents  avec  mon  un  noir 
+ souhaite  donné  que  ?  la  à  dorment  mange 
+ rat  mangé  méchant  sœur  à  pourchasse  quelle  donner 
+ méchant  donné  sœur 
+ dort  quoi  mangé 
+ chat  le  elle  qui  ?  sœur  dorment  il  voisin 
+ lui  donné  dents  donne  noir  souris  de 
+ il  noir  souhaite  mangé  avec  souris  que  pourchasse 
+ donne  attrape  mangé  très  chat 
+ dorment  pourchasse  mangée  ses  paisiblement 
+ quoi  noir  attrape  de  est  ?  par 
+ avec  souris  donné  la 
+ par  mangée  attrape  il  donné 
+ quelle  quel  mangé 
+ à  ses 
+ quoi  qui  très  fromage  la  lui  à  et  attrape 
+ méchant  avec  à  le  mangé  lui  paisiblement  quoi  sœur 
+ mangé  voisin  donné  quel  il  avec  mangée  lui 
+ ?  rat  à 
+ chat  quelle  de  rat  noir  mon  très  dort 
+ la  très  elle  dort  chat 
+ chat  quelle  par  dort 
+ pourchasse  elle  lui  noir  donné 
+ mange  mon  qui  ses  quoi  mangée  donné  noir  et 
+ chat  paisiblement  qui  noir  donner  et  donne 
+ chat  qui  ses  paisiblement  de 
+ mange  ?  donner  noir 
+ donner  quelle  pourchasse  un  par  que  le 
+ noir  attrape  dort  et  ?  un  chat 
+ par  souhaite  méchant  est  quel 
+ elle  souris  voisin  un  est  la  pourchasse  quel 
+ sœur  un  méchant 
+ dorment  et  avec 
+ chat  le  et  qui  mangée  quoi  un 
+ sœur  la  donner  avec  souhaite  voisin  un  méchant  chat 
+ rat  noir  pourchasse  par  fromage  que  mangé  le  donne  et 
+ quoi  fromage  donné  mon  dort 
+ ?  quelle  souhaite  quel  dort 
+ chat  sœur 
+ donné  lui  fromage  le  un  par 
+ donné  qui  chat  très  mangé  quel 
+ ses  dort  par 
+ dort  ses  de 
+ mangé  rat  est  attrape  méchant  donne  elle  à  dents  qui 
+ pourchasse  rat  sœur  donne  qui  le  elle  que 
+ très  de  donner  attrape  donné  quelle 
+ lui  ?  qui  mangé  le 
+ est  de  voisin  souhaite  paisiblement  pourchasse  quoi  mange  donne 
+ donné  mangé  donner  lui  attrape  elle  sœur 
+ attrape  ses  ?  que 
+ mange  mangée  de  par  fromage 
+ ses  il  ?  dorment  dort  paisiblement  mon 
+ donne  fromage  le  donné  un  dort  et  quel 
+ quelle  souhaite 
+ il  à  quel  est  dorment  donne  donner  souhaite  de  pourchasse 
+ qui  donne  mon  ses  fromage  la  quelle  ?  dorment 
+ lui  voisin  mangée  et  chat  attrape  dorment  ses  méchant  pourchasse 
+ voisin  pourchasse  mangée  dorment  mangé  fromage  qui  attrape  méchant 
+ dents  voisin  par  un 
+ ?  mangée  par  et  mon  à 
+ qui  donne  mangé  rat  ? 
+ la  quoi  donner  quelle  pourchasse  chat  dents  et  il  de 
+ lui  souris  voisin  par  donner 
+ et  elle 
+ rat  et  méchant  est  elle  quelle  de  à  fromage 
+ chat  est  mangé 
+ par  donné  dorment  avec  donne  un  très  lui 
+ chat  avec  mangé  et  à  qui  quoi  donné  rat  mon 
+ que  attrape  et  donne  pourchasse  quel  rat 
+ ?  donne  à  quoi  très 
+ chat  dort  mangé  attrape  mangée  qui  que  quel  sœur  dents 
+ quoi  fromage  et  par  que  pourchasse 
+ à  est  la  mange  quel  ?  dorment  dents  qui 
+ sœur  méchant  quelle  de  mange  lui  que  il  dort 
+ dort  elle  que  donné  mangée  très  et  souris  fromage  donne 
+ quelle  mon  dorment  lui  donné  ses 
+ par  voisin  mon  donner  méchant  attrape  souris  mangé  elle  quoi 
+ ?  pourchasse  attrape 
+ pourchasse  est  que  un  la  rat  méchant  le  dents  fromage 
+ très  elle  fromage  mangée  donne  voisin  pourchasse 
+ donne  dents  elle  avec  mon  de 
+ ?  attrape  mange  dorment  chat 
+ quoi  un  paisiblement 
+ souris  mangée 
+ quel  et  mangée  chat  méchant  de  souris  le 
+ quoi  sœur  de  dents  il  quelle 
+ souris  attrape  donné  avec  la  mange  voisin  noir  quelle  paisiblement 
+ le  souris  quelle  quoi  que 
+ mon  donné  ses  très  de  ?  mangé 
+ est  donner  avec  de  mangée  mange  ?  fromage  noir  le 
+ elle  dort  paisiblement  donner  il  pourchasse  est  par  lui  que 
+ donné  et  le  un  souhaite  souris  noir 
+ mon  très  elle  noir  et  chat  pourchasse  rat  mange  un 
+ qui  pourchasse  dorment  attrape  et  quoi 
+ attrape  voisin  de 
+ très  donné  le  donner  de  rat  souhaite  un  il  elle 
+ voisin  quelle  avec  attrape  chat 
+ mangé  donné  voisin  qui 
+ attrape  souris  donne  dents 
+ avec  ?  est  que  mange  dort  quoi  dents 
+ noir  mangé  très  et  la  quelle  donner  lui  mange  dort 
+ noir  très  et  la  dort 
+ fromage  mangé  elle  dort  noir  quoi  un 
+ dents  donné  chat 
+ donne  méchant  sœur  quoi  très  ses  rat  la 
+ noir  ?  elle  donné  de  la  fromage 
+ de  donne  quel  avec  et  donné 
+ mon  quel  le  mange  la  mangé  souhaite  sœur 
+ voisin  de  qui 
+ donne  pourchasse  noir  de  mangée  fromage  la 
+ souhaite  mange  quelle  la 
+ voisin  et  il  qui  un 
+ que  et  quel  méchant  pourchasse  paisiblement  sœur  ? 
+ quoi  dorment  très  mange  rat  donné 
+ qui  dents  avec  quel  mange  ? 
+ quelle  rat  souris  le  mon  lui 
+ paisiblement  sœur  donne  mangé  rat  un  fromage  méchant  ses  donner 
+ il  méchant  ses  pourchasse  noir  elle  de 
+ la  avec  mangé  donner 
+ noir  méchant  il  paisiblement  et  par  à 
+ donner  qui  souhaite  la 
+ rat  pourchasse  il  la  elle  attrape  à  chat  quoi  est 
+ elle  souhaite 
+ dort  pourchasse  mon  le  donner  mangé  quelle  souris 
+ dents  que  dorment  mange  donner  ?  sœur  et 
+ dort  elle  donner 
+ et  ses  quel  avec  voisin  à  mon  donner  très  de 
+ quoi  très  voisin  rat  ?  ses  méchant  lui 
+ souhaite  par  le  attrape  souris  donner  dort  donné  de  quel 
+ qui  voisin 
+ donner  de  méchant  donné  elle  voisin 
+ ses  le  attrape 
+ sœur  lui 
+ que  il  ?  méchant  mangée  voisin  par 
+ quoi  dorment  ?  et  quel  avec 
+ pourchasse  donné  ?  le  sœur  il  mange  quelle  rat 
+ quoi  qui  rat  dorment  la  souris  mange  pourchasse  le  il 
+ il  et  de  mange  noir 
+ est  ?  il  sœur  le  que 
+ donné  lui  quoi 
+ sœur  mangée  donné 
+ quelle  très  mangée  paisiblement 
+ par  lui  mange  que  méchant  mangée 
+ dorment  et 
+ sœur  elle 
+ pourchasse  attrape  de  fromage  mon  à 
+ donner  le  est  il  quoi 
+ méchant  donné  rat  par  mangée  la  donner 
+ dorment  fromage 
+ sœur  dort  lui  chat  qui  mange  elle  quelle  ses  noir 
+ dort  mon  dents  quoi  le  chat  avec 
+ voisin  mangée  un  souris  la  sœur  et  dort 
+ elle  méchant  le 
+ souhaite  dorment  par  chat 
+ quoi  donné  elle  un  quelle  méchant 
+ à  mange  donné  dort  la 
+ ?  paisiblement  ses  et 
+ elle  souhaite 
+ il  souhaite  attrape 
+ chat  et  un  donner  il  souhaite 
+ donné  donner  rat  la  mangé  souhaite  quel  attrape  par  dents 
+ de  ses  noir  elle  mon  avec  est  et 
+ dorment  souris  avec  fromage  il 
+ mange  un  est  très  fromage  quel  donner  elle  mangé 
+ dorment  ?  que 
+ fromage  quoi  dort  mange  chat  est  quel 
+ pourchasse  mange  dorment  méchant  est  donne  ?  elle 
+ de  attrape  un  qui  dort  sœur  pourchasse  paisiblement  quel  dents 
+ rat  dents 
+ quelle  dort 
+ ?  est  dorment  souhaite 
+ chat  mangée  ?  attrape  lui  fromage 
+ dents  mange  noir  quelle  souris  quoi  ?  qui  le 
+ noir  attrape  la 
+ souris  un  fromage  voisin  rat  quoi 
+ noir  souris  mange  est  voisin  lui  elle 
+ il  quelle  dents  mangé  ?  très  à  pourchasse  de 
+ voisin  très  qui  elle  mange  lui  quelle  rat 
+ le  souhaite  très  mange  lui  sœur  quel  donne  dents 
+ mange  très  souhaite 
+ dents  elle  dorment  le  très  mangé  sœur  et  souris  que 
+ il  lui  dents  ses  donné  souris 
+ donne  donné  souhaite  la  de  ?  attrape  pourchasse 
+ quoi  quelle  mon  dorment  donne  donner  pourchasse  paisiblement  mange 
+ paisiblement  noir 
+ le  dorment  elle  ?  il  mangé  mangée  paisiblement  la  mange 
+ donner  dorment  méchant  attrape  noir  quelle  de  sœur 
+ le  mangée  dort  quelle  fromage  souhaite  mon 
+ le  mangé  à 
+ mange  souhaite 
+ dents  mangé  qui  de  méchant  par 
+ à  qui  un  elle  souris  et  quelle  noir 
+ donner  quoi  est  chat 
+ que  souris  elle  ses  un  par  pourchasse  chat  dort  le 
+ dort  paisiblement  chat 
+ dents  donner  quelle  noir  donne  méchant  mangée  quoi 
+ souris  lui  rat  attrape  chat 
+ le  voisin  rat  attrape  donner  fromage  mange  elle 
+ la  que  mangée  quelle  quel  qui  et  voisin 
+ mange  pourchasse 
+ mangée  le  souhaite  par  très  donné  un  lui  avec 
+ ses  attrape  elle  mange  très  pourchasse  donner 
+ noir  quelle  donné  quel  dents  ses  est  donne  mangé  qui 
+ sœur  un  ?  et  fromage  il  ses  mangé 
+ mangée  méchant 
+ pourchasse  mangée  quelle  donné  dort  la 
+ noir  mange  paisiblement  est  ses  donné  très  à  qui 
+ ?  souhaite  donné  noir 
+ donne  donné  quel  rat  ses  souhaite  noir  un 
+ mange  souris  il  la  très  dorment 
+ un  à  rat 
+ quelle  donné  sœur  ?  qui  donne  voisin  donner  de 
+ fromage  voisin  lui  rat  avec  qui 
+ et  voisin 
+ de  avec  elle  noir  qui 
+ mangée  pourchasse  elle  par  est  souhaite  ses  très  à 
+ dort  chat  ?  noir  de  mangée  avec 
+ mangé  pourchasse  souris  attrape  fromage  ses 
+ mangé  la  le  voisin  mon  souris 
+ noir  mangé  qui  souris  avec 
+ donné  mangée 
+ qui  quel  que  paisiblement  et  très  donner 
+ que  de  mon  est  un  elle  mangée  rat  méchant 
+ donne  que  avec  ses  donné  elle 
+ mangée  sœur  un  souris  mon 
+ donne  elle  attrape  paisiblement  fromage  il  donné  dents 
+ paisiblement  mangée  est  que  il 
+ pourchasse  et  très 
+ fromage  dents  donne  à  la  méchant  avec  lui 
+ souhaite  quelle  dorment  rat  dents  pourchasse  la 
+ ses  dorment  très  il  souhaite 
+ donne  elle  la  dents  il  fromage  lui  quelle  sœur  mangée 
+ paisiblement  attrape  par  ?  noir  quelle  ses  un  sœur 
+ par  la  donne  pourchasse  très  elle  le  souhaite  ? 
+ il  mange  et  de  fromage  dort  ses 
+ il  mon  à  et 
+ la  à  dents  est  le  souris  un  noir 
+ dorment  paisiblement  ?  méchant 
+ mangé  très 
+ elle  attrape  dents  et  qui  donner  méchant  ?  dorment  mon 
+ souhaite  sœur  lui  très  rat  voisin  qui 
+ mangée  que  mon  il  attrape 
+ mon  souhaite  donné 
+ mangée  souhaite  donne  qui  rat  et  paisiblement  avec  ses  dents 
+ sœur  il  mangée  chat  elle  paisiblement  à 
+ avec  mangée  rat  quelle  mange  pourchasse  à  ? 
+ lui  voisin  paisiblement  donne  dort  avec 
+ dorment  paisiblement  et  que 
+ et  il  elle  lui  rat  quel 
+ le  pourchasse  que  donne  méchant  mangée  de  dents  est  dort 
