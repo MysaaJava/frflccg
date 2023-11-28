@@ -3,3 +3,6 @@
 
 # Lock files from libreoffice
 .~lock*
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
